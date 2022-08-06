@@ -48,6 +48,10 @@ public class MeetUpProjectV2Application implements CommandLineRunner {
 		
 		getEventByCreator("Jen Tse Kao");
 		
+		updateEventMessageById("3", "Let's go");
+		
+		getEventByCreator("Yibo Chen");
+		
 		System.out.println("-----Delete Event-----\n");
 		
 //		deleteEventById("4");
