@@ -36,11 +36,21 @@ public class MeetUpProjectV2Application implements CommandLineRunner {
 		
 		showAllEvents();
 		
-		System.out.println("-----Get Events by Creator-----\n");
+		System.out.println("-----Get Event by Creator-----\n");
 		
 		getEventByCreator("Chang Hee Son");
 		
 		getEventByCreator("Yibo Chen");
+		
+		System.out.println("-----Update Event Title-----\n");
+		
+		updateEventTitleById("1", "Fly to the moon");
+		
+		getEventByCreator("Jen Tse Kao");
+		
+		System.out.println("-----Delete Event-----\n");
+		
+//		deleteEventById("4");
 	}
 	
 	// Create 
@@ -62,11 +72,46 @@ public class MeetUpProjectV2Application implements CommandLineRunner {
 		eventsList.forEach(event -> System.out.println(getEventDetails(event)));
 	}
 	
-	// 2. get event by name
+	// 2. get event by creator
 	public void getEventByCreator(String creator) {
 		System.out.println("Getting event by creator: " + creator);
 		Event event = eventRepo.findEventByCreator(creator);
 		System.out.println(getEventDetails(event));
+	}
+	
+	// Update
+	public void updateEventTitleById(String id, String title) {
+		String newTitle = title;
+		
+		Event event = eventRepo.findEventById(id);
+		
+		event.setTitle(newTitle);
+		
+		Event updatedEvent = eventRepo.save(event);
+		
+		if (updatedEvent != null) {
+			System.out.println("Successfully updated title!");
+		}
+	}
+	
+	public void updateEventMessageById(String id, String message) {
+		String newMessage = message;
+		
+		Event event = eventRepo.findEventById(id);
+		
+		event.setMessage(newMessage);
+		
+		Event updatedEvent = eventRepo.save(event);
+		
+		if (updatedEvent != null) {
+			System.out.println("Successfully updated message!");
+		}
+	}
+	
+	// Delete
+	public void deleteEventById(String id) {
+		eventRepo.deleteById(id);
+		System.out.println("The event with id " + id + " is deleted...");
 	}
 
 	public String getEventDetails(Event event) {
