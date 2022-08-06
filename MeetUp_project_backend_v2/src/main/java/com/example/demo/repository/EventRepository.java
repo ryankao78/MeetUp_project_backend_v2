@@ -13,7 +13,14 @@ public interface EventRepository extends MongoRepository<Event, String> {
 	@Query("{creator: '?0'}")
 	Event findEventByCreator(String creator);
 	
-	@Query(value = "{creator: '?0'}")
-	List<Event> findAll(String creator);
+	@Query("{id: '?0'}")
+	Event findEventById(String id);
+	
+	// Does this work the same way as using id?
+//	@Query(value = "{creator: '?0'}")
+//	List<Event> findAll(String creator);
+	
+	@Query(value = "{id: '?0'}")
+	List<Event> findAll(String id);
 
 }
