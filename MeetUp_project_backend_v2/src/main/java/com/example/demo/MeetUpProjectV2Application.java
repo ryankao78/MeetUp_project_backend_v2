@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -15,7 +14,7 @@ import com.example.demo.repository.EventRepository;
 
 @SpringBootApplication
 @EnableMongoRepositories
-public class MeetUpProjectV2Application implements CommandLineRunner {
+public class MeetUpProjectV2Application {
 	
 	@Autowired
 	EventRepository eventRepo;
@@ -25,38 +24,9 @@ public class MeetUpProjectV2Application implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(MeetUpProjectV2Application.class, args);
 	}
-
-	@Override
-	public void run(String... args) throws Exception {
-		System.out.println("-----Create User Events-----");
-		
-//		createEvent();
-		
-		System.out.println("-----Show All User Events-----\n");
-		
-		showAllEvents();
-		
-		System.out.println("-----Get Event by Creator-----\n");
-		
-		getEventByCreator("Chang Hee Son");
-		
-		getEventByCreator("Yibo Chen");
-		
-		System.out.println("-----Update Event Title-----\n");
-		
-		updateEventTitleById("1", "Fly to the moon");
-		
-		getEventByCreator("Jen Tse Kao");
-		
-		updateEventMessageById("3", "Let's go");
-		
-		getEventByCreator("Yibo Chen");
-		
-		System.out.println("-----Delete Event-----\n");
-		
-//		deleteEventById("4");
-	}
 	
+	/*
+
 	// Create 
 	void createEvent() {
 		System.out.println("Event creation started: ");
@@ -68,7 +38,7 @@ public class MeetUpProjectV2Application implements CommandLineRunner {
 		
 		System.out.println("Event creation completed!");
 	}
-	
+
 	// Read
 	// 1. show all data
 	public void showAllEvents() {
@@ -128,4 +98,8 @@ public class MeetUpProjectV2Application implements CommandLineRunner {
 		
 		return "";
 	}
+	
+	*/
+	
 }
+
