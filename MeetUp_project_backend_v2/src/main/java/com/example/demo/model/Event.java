@@ -19,6 +19,8 @@ public class Event {
 	private int joinCount;
 	private int rejectCount;
 	private Date createdAt;
+	
+	public Event() { }
 
 	public Event(String id, String creator, String title, String message, int joinCount,
 			int rejectCount, Date createdAt) {
