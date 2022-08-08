@@ -9,7 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import com.example.demo.model.Event;
+import com.example.demo.entity.Event;
 import com.example.demo.repository.EventRepository;
 
 @SpringBootApplication

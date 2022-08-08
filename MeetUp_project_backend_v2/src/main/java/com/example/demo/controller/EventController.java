@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.example.demo.dto.EventDTO;
-import com.example.demo.model.Event;
+import com.example.demo.entity.Event;
 import com.example.demo.service.EventService;
 
 @RestController

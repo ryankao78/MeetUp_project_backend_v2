@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dto.EventDTO;
-import com.example.demo.model.Event;
+import com.example.demo.entity.Event;
 import com.example.demo.repository.EventRepository;
 
 @Service
