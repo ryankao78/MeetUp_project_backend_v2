@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-import com.example.demo.model.Event;
+import com.example.demo.entity.Event;
 
 // @Repository // not necessary
 public interface EventRepository extends MongoRepository<Event, String> {
