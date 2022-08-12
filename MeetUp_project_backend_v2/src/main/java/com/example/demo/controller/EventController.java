@@ -49,7 +49,7 @@ public class EventController {
 	
 	@CrossOrigin
 	@PostMapping(path = "/insertEvent")
-	public ResponseEntity<?> createEvent(@RequestBody EventDTO eventDTO) {
+	public ResponseEntity<?> insertEvent(@RequestBody EventDTO eventDTO) {
 		LOGGER.info("EventController createEvent(): ");
 		Event event = eService.insertEvent(eventDTO);
 		return ResponseEntity.ok(event);
