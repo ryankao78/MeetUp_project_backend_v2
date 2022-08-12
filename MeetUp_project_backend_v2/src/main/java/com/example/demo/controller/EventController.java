@@ -63,6 +63,7 @@ public class EventController {
 		return ResponseEntity.ok(event);
 	}
 	
+	@CrossOrigin
 	@DeleteMapping(path = "/deleteEvent/{id}")
 	public ResponseEntity<?> deleteEventById(@PathVariable("id") String id) {
 		LOGGER.info("EventController deleteEventById(): ");
